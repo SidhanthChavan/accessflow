@@ -1,0 +1,38 @@
+# Production-style schedule: reconcile access every weekday morning.
+# Uses GitHub OIDC to assume an AWS role - no long-lived AWS keys stored anywhere.
+# Disabled by default: set the repository variable ACCESSFLOW_ENABLED=true to turn on.
+name: Daily access reconciliation
+
+on:
+  schedule:
+    - cron: "17 6 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  reconcile:
+    if: vars.ACCESSFLOW_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    environment: production        # requires reviewer approval in repo settings
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e .
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.ACCESSFLOW_AWS_ROLE_ARN }}
+          aws-region: eu-west-2
+      - name: Fetch HR export
+        run: aws s3 cp "s3://${{ vars.HR_EXPORT_BUCKET }}/latest/hr_feed.csv" data/hr_feed.csv
+      - name: Apply access changes
+        run: accessflow apply --hr data/hr_feed.csv --policy config/policy.yaml --aws --actor github-actions
+      - name: Archive audit log and report
+        if: always()
+        run: |
+          aws s3 cp audit/audit.jsonl "s3://${{ vars.AUDIT_BUCKET }}/audit/audit.jsonl"
+          aws s3 cp reports/ "s3://${{ vars.AUDIT_BUCKET }}/reports/$(date +%F)/" --recursive

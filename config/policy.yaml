@@ -1,0 +1,122 @@
+# Who gets access to what.
+# Change this through a PR so there's a record of who changed what.
+
+systems: [google_workspace, slack, github, aws_iam]
+
+# create accounts this many days before someone starts
+joiner_lead_days: 3
+
+# what to do with accounts that aren't in HR: report or disable
+orphan_action: disable
+
+# stop if a run looks wrong (e.g. HR file only half exported)
+safety:
+  max_disable_percent: 25
+  max_changes: 200
+  min_disables_before_guard: 3
+
+# never touch these
+protected_accounts:
+  aws_iam: [terraform-ci, break-glass-admin]
+
+# everyone gets these
+baseline:
+  google_workspace: [all-staff]
+  slack: [general, announcements]
+
+rules:
+  - name: Engineering
+    match: { department: Engineering }
+    grant:
+      github: [engineering]
+      slack: [eng]
+      aws_iam: [developers]
+      google_workspace: [eng-team]
+
+  - name: Senior engineers get production read-only
+    match: { department: Engineering, title_contains: [Senior, Lead, Principal, Platform] }
+    grant:
+      aws_iam: [prod-readonly]
+
+  - name: Data team
+    match: { department: Data }
+    grant:
+      github: [data-team]
+      slack: [data]
+      aws_iam: [data-analysts]
+
+  - name: Data engineers
+    match: { department: Data, title_contains: Engineer }
+    grant:
+      aws_iam: [data-engineers]
+
+  - name: Security
+    match: { department: Security }
+    grant:
+      github: [security]
+      slack: [security]
+      aws_iam: [security-auditors]
+
+  - name: Finance
+    match: { department: Finance }
+    grant:
+      google_workspace: [finance-team]
+      slack: [finance]
+
+  - name: Finance approvers
+    match: { department: Finance, title_contains: Manager }
+    grant:
+      google_workspace: [finance-approvers]
+
+  - name: Accounts payable
+    match: { department: Finance, title_contains: Payable }
+    grant:
+      google_workspace: [finance-payments]
+
+  - name: Sales
+    match: { department: Sales }
+    grant:
+      google_workspace: [sales-team]
+      slack: [sales]
+
+  - name: Marketing
+    match: { department: Marketing }
+    grant:
+      google_workspace: [marketing-team]
+      slack: [marketing]
+
+  - name: Office channels - London
+    match: { location: London }
+    grant: { slack: [office-london] }
+
+  - name: Office channels - Manchester
+    match: { location: Manchester }
+    grant: { slack: [office-manchester] }
+
+  - name: Contractors - no prod access, no staff directory
+    match: { employment_type: contractor }
+    grant:
+      google_workspace: [contractors]
+    deny:
+      google_workspace: [all-staff]
+      aws_iam: [prod-readonly, prod-admin]
+
+# nobody should have both of these at once
+segregation_of_duties:
+  - name: Payment maker-checker
+    conflicting: [google_workspace:finance-payments, google_workspace:finance-approvers]
+  - name: Production admin vs. security auditor
+    conflicting: [aws_iam:prod-admin, aws_iam:security-auditors]
+
+# temporary access, removed automatically after the expiry date
+access_exceptions:
+  - username: omar.farouk
+    grant: { aws_iam: [prod-admin] }
+    expires: 2026-11-10
+    approved_by: cto@northwind.example
+    ticket: SEC-131
+  - username: jake.morris
+    grant: { aws_iam: [prod-admin] }
+    expires: 2026-11-24
+    approved_by: cto@northwind.example
+    ticket: SEC-142

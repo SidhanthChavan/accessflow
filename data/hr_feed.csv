@@ -1,0 +1,18 @@
+employee_id,email,full_name,department,title,location,employment_type,manager_email,start_date,end_date
+E1001,aisha.khan@northwind.example,Aisha Khan,Engineering,Senior Software Engineer,London,employee,cto@northwind.example,2022-03-01,
+E1002,tom.baker@northwind.example,Tom Baker,Engineering,Software Engineer,Manchester,employee,aisha.khan@northwind.example,2023-06-12,
+E1003,priya.patel@northwind.example,Priya Patel,Engineering,Platform Engineer,London,employee,aisha.khan@northwind.example,2021-09-20,
+E1004,lucy.chen@northwind.example,Lucy Chen,Data,Data Analyst,Manchester,employee,omar.farouk@northwind.example,2024-01-08,
+E1005,omar.farouk@northwind.example,Omar Farouk,Data,Senior Data Engineer,Manchester,employee,cto@northwind.example,2020-11-02,
+E1006,grace.oconnor@northwind.example,Grace O'Connor,Finance,Finance Manager,London,employee,cfo@northwind.example,2019-04-15,
+E1007,daniel.reed@northwind.example,Daniel Reed,Finance,Accounts Payable Clerk,Manchester,employee,grace.oconnor@northwind.example,2023-02-27,
+E1008,mia.wong@northwind.example,Mia Wong,Sales,Account Executive,London,employee,sales.director@northwind.example,2022-07-04,
+E1009,sam.taylor@northwind.example,Sam Taylor,Engineering,Senior Contract Developer,Manchester,contractor,aisha.khan@northwind.example,2025-10-01,2027-03-31
+E1010,hannah.lee@northwind.example,Hannah Lee,Marketing,Marketing Manager,London,employee,cmo@northwind.example,2021-05-10,2026-11-14
+E1011,ravi.sharma@northwind.example,Ravi Sharma,Engineering,Software Engineer,Manchester,employee,aisha.khan@northwind.example,2026-11-21,
+E1012,emma.wilson@northwind.example,Emma Wilson,Data,Data Analyst,London,employee,omar.farouk@northwind.example,2026-12-15,
+E1013,chris.evans@northwind.example,Chris Evans,Sales,Sales Development Rep,Manchester,employee,sales.director@northwind.example,2024-09-02,2026-11-18
+E1014,ben.carter@northwind.example,Ben Carter,Marketing,Contract Designer,London,contractor,hannah.lee@northwind.example,2025-02-03,
+E1015,nina.roberts@,Nina Roberts,Sales,Account Executive,London,employee,sales.director@northwind.example,2026-11-03,
+E1016,jake.morris@northwind.example,Jake Morris,Security,Security Engineer,London,employee,cto@northwind.example,2023-08-14,
+E1017,olivia.green@northwind.example,Olivia Green,Data,Data Engineer,Manchester,employee,omar.farouk@northwind.example,2026-11-17,

@@ -1,0 +1,38 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadManagedUsersAndGroups",
+      "Effect": "Allow",
+      "Action": [
+        "iam:ListUsers",
+        "iam:ListUserTags",
+        "iam:ListGroupsForUser",
+        "iam:ListAccessKeys"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "ManageOnlyAccessFlowUsers",
+      "Effect": "Allow",
+      "Action": [
+        "iam:CreateUser",
+        "iam:TagUser",
+        "iam:DeleteLoginProfile",
+        "iam:UpdateAccessKey",
+        "iam:AddUserToGroup",
+        "iam:RemoveUserFromGroup"
+      ],
+      "Resource": [
+        "arn:aws:iam::*:user/accessflow/*",
+        "arn:aws:iam::*:group/*"
+      ]
+    },
+    {
+      "Sid": "NeverTouchAdminGroups",
+      "Effect": "Deny",
+      "Action": ["iam:AddUserToGroup"],
+      "Resource": "arn:aws:iam::*:group/Administrators"
+    }
+  ]
+}

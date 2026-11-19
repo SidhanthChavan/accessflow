@@ -1,0 +1,477 @@
+{
+  "aws_iam": {
+    "users": {
+      "aisha.khan": {
+        "display_name": "aisha.khan",
+        "enabled": true,
+        "groups": [
+          "developers",
+          "prod-readonly"
+        ],
+        "managed": true
+      },
+      "break-glass-admin": {
+        "display_name": "break-glass-admin",
+        "enabled": true,
+        "groups": [
+          "prod-admin"
+        ],
+        "managed": true
+      },
+      "j.smith-legacy": {
+        "display_name": "j.smith-legacy",
+        "enabled": true,
+        "groups": [
+          "developers",
+          "prod-readonly"
+        ],
+        "managed": true
+      },
+      "jake.morris": {
+        "display_name": "jake.morris",
+        "enabled": true,
+        "groups": [
+          "prod-admin",
+          "security-auditors"
+        ],
+        "managed": true
+      },
+      "lucy.chen": {
+        "display_name": "lucy.chen",
+        "enabled": true,
+        "groups": [
+          "data-analysts"
+        ],
+        "managed": true
+      },
+      "mia.wong": {
+        "display_name": "mia.wong",
+        "enabled": true,
+        "groups": [
+          "developers"
+        ],
+        "managed": true
+      },
+      "olivia.green": {
+        "display_name": "olivia.green",
+        "enabled": false,
+        "groups": [],
+        "managed": true
+      },
+      "omar.farouk": {
+        "display_name": "omar.farouk",
+        "enabled": true,
+        "groups": [
+          "data-analysts",
+          "data-engineers",
+          "prod-admin"
+        ],
+        "managed": true
+      },
+      "priya.patel": {
+        "display_name": "priya.patel",
+        "enabled": true,
+        "groups": [
+          "developers",
+          "prod-readonly"
+        ],
+        "managed": true
+      },
+      "sam.taylor": {
+        "display_name": "sam.taylor",
+        "enabled": true,
+        "groups": [
+          "developers"
+        ],
+        "managed": true
+      },
+      "terraform-ci": {
+        "display_name": "terraform-ci",
+        "enabled": true,
+        "groups": [
+          "prod-admin"
+        ],
+        "managed": true
+      },
+      "tom.baker": {
+        "display_name": "tom.baker",
+        "enabled": true,
+        "groups": [
+          "data-analysts"
+        ],
+        "managed": true
+      }
+    }
+  },
+  "github": {
+    "users": {
+      "aisha.khan": {
+        "display_name": "aisha.khan",
+        "enabled": true,
+        "groups": [
+          "engineering"
+        ],
+        "managed": true
+      },
+      "jake.morris": {
+        "display_name": "jake.morris",
+        "enabled": true,
+        "groups": [
+          "security"
+        ],
+        "managed": true
+      },
+      "lucy.chen": {
+        "display_name": "lucy.chen",
+        "enabled": true,
+        "groups": [
+          "data-team",
+          "engineering"
+        ],
+        "managed": true
+      },
+      "old-intern": {
+        "display_name": "old-intern",
+        "enabled": true,
+        "groups": [
+          "engineering"
+        ],
+        "managed": true
+      },
+      "olivia.green": {
+        "display_name": "olivia.green",
+        "enabled": false,
+        "groups": [],
+        "managed": true
+      },
+      "omar.farouk": {
+        "display_name": "omar.farouk",
+        "enabled": true,
+        "groups": [
+          "data-team"
+        ],
+        "managed": true
+      },
+      "priya.patel": {
+        "display_name": "priya.patel",
+        "enabled": true,
+        "groups": [
+          "engineering"
+        ],
+        "managed": true
+      },
+      "sam.taylor": {
+        "display_name": "sam.taylor",
+        "enabled": true,
+        "groups": [
+          "engineering"
+        ],
+        "managed": true
+      },
+      "tom.baker": {
+        "display_name": "tom.baker",
+        "enabled": true,
+        "groups": [
+          "data-team"
+        ],
+        "managed": true
+      }
+    }
+  },
+  "google_workspace": {
+    "users": {
+      "aisha.khan": {
+        "display_name": "aisha.khan",
+        "enabled": true,
+        "groups": [
+          "all-staff",
+          "eng-team"
+        ],
+        "managed": true
+      },
+      "ben.carter": {
+        "display_name": "ben.carter",
+        "enabled": true,
+        "groups": [
+          "contractors",
+          "marketing-team"
+        ],
+        "managed": true
+      },
+      "chris.evans": {
+        "display_name": "chris.evans",
+        "enabled": true,
+        "groups": [
+          "all-staff",
+          "sales-team"
+        ],
+        "managed": true
+      },
+      "daniel.reed": {
+        "display_name": "daniel.reed",
+        "enabled": true,
+        "groups": [
+          "all-staff",
+          "finance-approvers",
+          "finance-payments",
+          "finance-team"
+        ],
+        "managed": true
+      },
+      "grace.oconnor": {
+        "display_name": "grace.oconnor",
+        "enabled": true,
+        "groups": [
+          "all-staff",
+          "finance-approvers",
+          "finance-team"
+        ],
+        "managed": true
+      },
+      "hannah.lee": {
+        "display_name": "hannah.lee",
+        "enabled": true,
+        "groups": [
+          "all-staff",
+          "marketing-team"
+        ],
+        "managed": true
+      },
+      "jake.morris": {
+        "display_name": "jake.morris",
+        "enabled": true,
+        "groups": [
+          "all-staff"
+        ],
+        "managed": true
+      },
+      "lucy.chen": {
+        "display_name": "lucy.chen",
+        "enabled": true,
+        "groups": [
+          "all-staff"
+        ],
+        "managed": true
+      },
+      "mia.wong": {
+        "display_name": "mia.wong",
+        "enabled": true,
+        "groups": [
+          "all-staff",
+          "sales-team"
+        ],
+        "managed": true
+      },
+      "olivia.green": {
+        "display_name": "olivia.green",
+        "enabled": false,
+        "groups": [],
+        "managed": true
+      },
+      "omar.farouk": {
+        "display_name": "omar.farouk",
+        "enabled": true,
+        "groups": [
+          "all-staff"
+        ],
+        "managed": true
+      },
+      "priya.patel": {
+        "display_name": "priya.patel",
+        "enabled": true,
+        "groups": [
+          "all-staff",
+          "eng-team"
+        ],
+        "managed": true
+      },
+      "sam.taylor": {
+        "display_name": "sam.taylor",
+        "enabled": true,
+        "groups": [
+          "contractors",
+          "eng-team"
+        ],
+        "managed": true
+      },
+      "tom.baker": {
+        "display_name": "tom.baker",
+        "enabled": true,
+        "groups": [
+          "all-staff"
+        ],
+        "managed": true
+      }
+    }
+  },
+  "slack": {
+    "users": {
+      "aisha.khan": {
+        "display_name": "aisha.khan",
+        "enabled": true,
+        "groups": [
+          "announcements",
+          "eng",
+          "general",
+          "office-london"
+        ],
+        "managed": true
+      },
+      "ben.carter": {
+        "display_name": "ben.carter",
+        "enabled": true,
+        "groups": [
+          "announcements",
+          "general",
+          "marketing",
+          "office-london"
+        ],
+        "managed": true
+      },
+      "chris.evans": {
+        "display_name": "chris.evans",
+        "enabled": true,
+        "groups": [
+          "announcements",
+          "general",
+          "office-manchester",
+          "sales"
+        ],
+        "managed": true
+      },
+      "daniel.reed": {
+        "display_name": "daniel.reed",
+        "enabled": true,
+        "groups": [
+          "announcements",
+          "finance",
+          "general",
+          "office-manchester"
+        ],
+        "managed": true
+      },
+      "deploy-bot": {
+        "display_name": "deploy-bot",
+        "enabled": true,
+        "groups": [
+          "eng"
+        ],
+        "managed": false
+      },
+      "grace.oconnor": {
+        "display_name": "grace.oconnor",
+        "enabled": true,
+        "groups": [
+          "announcements",
+          "finance",
+          "general",
+          "office-london"
+        ],
+        "managed": true
+      },
+      "hannah.lee": {
+        "display_name": "hannah.lee",
+        "enabled": true,
+        "groups": [
+          "announcements",
+          "general",
+          "marketing",
+          "office-london"
+        ],
+        "managed": true
+      },
+      "jake.morris": {
+        "display_name": "jake.morris",
+        "enabled": true,
+        "groups": [
+          "announcements",
+          "general",
+          "office-london",
+          "security"
+        ],
+        "managed": true
+      },
+      "lucy.chen": {
+        "display_name": "lucy.chen",
+        "enabled": true,
+        "groups": [
+          "announcements",
+          "data",
+          "general",
+          "office-manchester"
+        ],
+        "managed": true
+      },
+      "mia.wong": {
+        "display_name": "mia.wong",
+        "enabled": true,
+        "groups": [
+          "announcements",
+          "general",
+          "office-london",
+          "sales"
+        ],
+        "managed": true
+      },
+      "olivia.green": {
+        "display_name": "olivia.green",
+        "enabled": false,
+        "groups": [],
+        "managed": true
+      },
+      "omar.farouk": {
+        "display_name": "omar.farouk",
+        "enabled": true,
+        "groups": [
+          "announcements",
+          "data",
+          "general",
+          "office-manchester"
+        ],
+        "managed": true
+      },
+      "priya.patel": {
+        "display_name": "priya.patel",
+        "enabled": true,
+        "groups": [
+          "announcements",
+          "eng",
+          "general",
+          "office-london"
+        ],
+        "managed": true
+      },
+      "sam.taylor": {
+        "display_name": "sam.taylor",
+        "enabled": true,
+        "groups": [
+          "announcements",
+          "eng",
+          "general",
+          "office-manchester"
+        ],
+        "managed": true
+      },
+      "temp.vendor": {
+        "display_name": "temp.vendor",
+        "enabled": true,
+        "groups": [
+          "eng",
+          "general"
+        ],
+        "managed": true
+      },
+      "tom.baker": {
+        "display_name": "tom.baker",
+        "enabled": true,
+        "groups": [
+          "announcements",
+          "data",
+          "general",
+          "office-manchester"
+        ],
+        "managed": true
+      }
+    }
+  }
+}
